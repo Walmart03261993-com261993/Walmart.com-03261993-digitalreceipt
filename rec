@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .receipt {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .receipt-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="receipt" id="customReceipt">
+        <div class="receipt-item">
+            <label for="receiptNumber">Receipt Number:</label>
+            <span id="receiptNumber">12345</span>
+        </div>
+        <div class="receipt-item">
+            <label for="date">Date:</label>
+            <span id="date">2023-01-01</span>
+        </div>
+        <div class="receipt-item">
+            <label for="customerName">Customer Name:</label>
+            <span id="customerName">John Doe</span>
+        </div>
+        <div class="receipt-item">
+            <label for="totalAmount">Total Amount:</label>
+            <span id="totalAmount">$50.00</span>
+        </div>
+        <button onclick="editReceipt()">Edit Receipt</button>
+    </div>
+
+    <script>
+        function editReceipt() {
+            // Enable editing of fields
+            document.getElementById('receiptNumber').contentEditable = true;
+            document.getElementById('date').contentEditable = true;
+            document.getElementById('customerName').contentEditable = true;
+            document.getElementById('totalAmount').contentEditable = true;
+        }
+    </script>
+
+</body>
+</html>
